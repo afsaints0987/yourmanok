@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    background: transparent;
+    position: sticky;
+
+    @include desktop {
+        margin: 0 10rem;
+    }
+
+    .logo {
+        width: 100px;
+        position: relative;
+        
+    }
+
+    .navbar {
+        display: none;
+
+        @include desktop {
+            display: flex;
+        }
+
+        a {
+            color: $primaryColor;
+            text-decoration: none;
+            margin-right: 2rem;
+            transition: all 0.3s ease-out;
+
+            &:hover {
+                color: $subColor;
+                font-weight: 700;
+                transition: all 0.3s ease-out;
+            }
+        }
+    }
+}

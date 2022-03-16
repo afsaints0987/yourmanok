@@ -1,0 +1,40 @@
+.sidebar_menu {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+
+    @include desktop {
+        display: none;
+    }
+
+    .burger_menu {
+        display: block;
+        position: relative;
+        width: 1.5rem;
+        height: 3px;
+        background: $primaryColor;
+        border-radius: 2px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1.5rem;
+            height: 3px;
+            background: $primaryColor;
+            border-radius: 2px;
+            top: 7px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1.5rem;
+            height: 3px;
+            background: $primaryColor;
+            border-radius: 2px;
+            bottom: 7px;
+        }
+        &:hover {
+            background: $subColor;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,400;1,700&display=swap');
+
+$textColor: #333;
+$subColor: #de0202;
+$secondaryColor: #fff373;
+$primaryColor: #f3f3f3;
+
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 650px;
+
+$font: 'Poppins', sans-serif;
+$headerFont: 'Pacifico', cursive;
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media (min-width: $tablet) and (max-width: 1023px){
+        @content
+    }
+};
+@mixin mobile {
+    @media (max-width: $mobile) and (min-width: 300px){
+        @content
+    }
+};
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+}
+
+li {
+    list-style-type: none;
+}
+
+.italic {
+    font-style: italic;
+}
+
+@mixin btnColor {
+    background: $subColor;
+    border: none;
+    color: $primaryColor;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    font-family: $font;
+    margin-top: 2rem;
+}
+
+@import './nav';
+@import './hero';
+@import './product';
+@import './location';
+@import './footer';
+@import './sidebar';

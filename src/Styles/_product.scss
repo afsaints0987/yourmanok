@@ -1,0 +1,40 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+
+    .card {
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 33.3%);
+            margin-top: 5rem;
+        }
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(3, 33.3%);
+            margin-top: 5rem;
+        }
+
+        .card_body {
+            margin: 2rem;
+
+            .card_text {
+                margin-top: 2rem;
+            }
+
+            .card_image {
+                width: 200px;
+                
+                @include desktop {
+                    width: 450px;
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+   
+
+}

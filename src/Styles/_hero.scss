@@ -1,0 +1,42 @@
+.banner {
+    background-blend-mode: overlay;
+    background-color: $textColor;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    .banner_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: $primaryColor;
+        margin-top: 15rem;
+
+        h1 {
+            font-family: $headerFont;
+
+            @include desktop {
+                font-size: clamp(2.5rem, 5vw, 3rem);
+            }
+        }
+
+        button {
+            @include btnColor;
+            transition: 0.2s ease-out;
+
+            &:hover {
+                background: $secondaryColor;
+                transition: all 0.2s ease-out;
+                color: $textColor;
+                cursor: pointer;
+            }
+        }
+    }
+    
+        
+    
+}
+
+

@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    margin: 0 10rem;
+  }
+}
+
+.header .logo {
+  width: 100px;
+  position: relative;
+}
+
+.header .navbar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header .navbar a {
+  color: #f3f3f3;
+  text-decoration: none;
+  margin-right: 2rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.header .navbar a:hover {
+  color: #de0202;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.banner {
+  background-blend-mode: overlay;
+  background-color: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.banner .banner_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #f3f3f3;
+  margin-top: 15rem;
+}
+
+.banner .banner_text h1 {
+  font-family: "Pacifico", cursive;
+}
+
+@media (min-width: 1024px) {
+  .banner .banner_text h1 {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+  }
+}
+
+.banner .banner_text button {
+  background: #de0202;
+  border: none;
+  color: #f3f3f3;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  margin-top: 2rem;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.banner .banner_text button:hover {
+  background: #fff373;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #333;
+  cursor: pointer;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .products .card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (33.3%)[3];
+        grid-template-columns: repeat(3, 33.3%);
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .products .card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (33.3%)[3];
+        grid-template-columns: repeat(3, 33.3%);
+    margin-top: 5rem;
+  }
+}
+
+.products .card .card_body {
+  margin: 2rem;
+}
+
+.products .card .card_body .card_text {
+  margin-top: 2rem;
+}
+
+.products .card .card_body .card_image {
+  width: 200px;
+}
+
+@media (min-width: 1024px) {
+  .products .card .card_body .card_image {
+    width: 450px;
+    height: 250px;
+  }
+}
+
+.location_section {
+  background: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #f3f3f3;
+}
+
+@media (min-width: 1024px) {
+  .location_section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 50vh;
+  }
+}
+
+.location_section h2 {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+  .location_section h2 {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .location_section h2 {
+    margin: auto;
+  }
+}
+
+.location_section .location_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  border-left: 1px solid #f3f3f3;
+  margin-right: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .location_section .location_container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.location_section .location_container .branch_container {
+  margin-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .location_section .location_container .branch_container {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .location_section .location_container .branch_container:nth-child(2) {
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 5rem;
+  background: #333;
+  color: #f3f3f3;
+  border-top: 1px solid #f3f3f3;
+}
+
+.sidebar_menu {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .sidebar_menu {
+    display: none;
+  }
+}
+
+.sidebar_menu .burger_menu {
+  display: block;
+  position: relative;
+  width: 1.5rem;
+  height: 3px;
+  background: #f3f3f3;
+  border-radius: 2px;
+}
+
+.sidebar_menu .burger_menu::before {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 3px;
+  background: #f3f3f3;
+  border-radius: 2px;
+  top: 7px;
+}
+
+.sidebar_menu .burger_menu::after {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 3px;
+  background: #f3f3f3;
+  border-radius: 2px;
+  bottom: 7px;
+}
+
+.sidebar_menu .burger_menu:hover {
+  background: #de0202;
+}
+/*# sourceMappingURL=styles.css.map */
