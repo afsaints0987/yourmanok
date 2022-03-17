@@ -12,14 +12,23 @@
         align-items: center;
         text-align: center;
         color: $primaryColor;
-        margin-top: 15rem;
+        margin-top: 10rem;
 
         h1 {
             font-family: $headerFont;
+            margin: 0 3rem;
+            border-right: 1px solid $primaryColor;
+            border-bottom: 1px solid $primaryColor;
+            box-shadow: 3px 3px 1px $secondaryColor;
+            padding-right: 1rem;
+            padding-bottom: 0.5rem;
 
             @include desktop {
                 font-size: clamp(2.5rem, 5vw, 3rem);
             }
+        }
+        p {
+            margin-top: 1rem;
         }
 
         button {

@@ -2,11 +2,12 @@
     background: $textColor;
     display: flex;
     justify-content: center;
-    color: $primaryColor;
+    color: $secondaryColor;
 
     @include desktop {
         flex-direction: column;
         min-height: 50vh;
+        padding-bottom: 5rem;
     }
 
     h2 {
@@ -16,6 +17,7 @@
 
         @include desktop {
             margin-top: 2rem;
+
         }
         @include tablet {
             margin: auto;
@@ -42,8 +44,8 @@
                 margin-top: 5rem;
                 
                 &:nth-child(2) {
-                    border-left: 1px solid $primaryColor;
-                    border-right: 1px solid $primaryColor;
+                    border-left: 1px solid $secondaryColor;
+                    border-right: 1px solid $secondaryColor;
                 }
             }
         }

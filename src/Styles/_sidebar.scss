@@ -1,7 +1,8 @@
 .sidebar_menu {
-    position: absolute;
+    position: fixed;
     top: 3rem;
     right: 3rem;
+    z-index: 3;
 
     @include desktop {
         display: none;
@@ -15,6 +16,14 @@
         background: $primaryColor;
         border-radius: 2px;
 
+        &:hover,
+        &:hover::before, 
+        &:hover::after {
+            background: $subColor;
+            transition: all 0.2s ease-out;
+            cursor: pointer;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -23,6 +32,7 @@
             background: $primaryColor;
             border-radius: 2px;
             top: 7px;
+
         }
         &::after {
             content: '';
@@ -33,8 +43,63 @@
             border-radius: 2px;
             bottom: 7px;
         }
-        &:hover {
-            background: $subColor;
+    }
+    .sidebar {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        padding: 0 8rem;
+        height: 100vh;
+        background: $secondaryColor;
+        position: absolute;
+        top: -3rem;
+        right: -5rem;
+        z-index: -1;
+        animation: slide 0.3s forwards;
+
+        a {
+            color: $textColor;
+            text-decoration: none;
+            margin-top: 1rem;
+
+            &:hover {
+                color: $subColor;
+                font-weight: 700;
+                transition: all 0.3s ease-out;
+            }
+        }
+
+        button {
+            @include btnColor;
+            transition: 0.2s ease-out;
+            width: 7.5rem;
+
+            &:hover {
+                background: $textColor;
+                transition: all 0.2s ease-out;
+                color: $secondaryColor;
+                cursor: pointer;
+            }
+        }
+    }
+    @keyframes slide {
+        0% {
+            left: 0;
+        }
+        25% {
+            left: -1.25rem;
+        }
+        50% {
+            left: -2.5rem;
+        }
+        75% {
+            left: -5rem;
+        }
+        100% {
+            left: -12rem;
         }
     }
 }

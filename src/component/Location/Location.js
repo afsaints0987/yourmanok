@@ -25,7 +25,7 @@ function Location() {
             <div className="location_container">
                 {Branches.map((branch, index) => {
                     return (
-                        <div key={index} git className="branch_container">
+                        <div key={index} className="branch_container">
                             <h4>{branch.name}</h4>
                             <p>{branch.address}</p>
                             <p>{branch.contact}</p>
