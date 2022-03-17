@@ -3,18 +3,25 @@
     top: 3rem;
     right: 3rem;
     z-index: 3;
+    width: 1.5rem;
+
 
     @include desktop {
         display: none;
     }
 
-    .burger_menu {
+    #burger{
         display: block;
         position: relative;
         width: 1.5rem;
         height: 3px;
         background: $primaryColor;
         border-radius: 2px;
+        transition: all 0.2s ease-out;
+
+        &.open {
+            background: transparent;
+        }
 
         &:hover,
         &:hover::before, 
@@ -32,6 +39,8 @@
             background: $primaryColor;
             border-radius: 2px;
             top: 7px;
+            display: block;
+            transition: all 0.2s ease-out;
 
         }
         &::after {
@@ -42,6 +51,9 @@
             background: $primaryColor;
             border-radius: 2px;
             bottom: 7px;
+            display: block;
+            transition: all 0.2s ease-out;
+
         }
     }
     .sidebar {
@@ -58,7 +70,7 @@
         top: -3rem;
         right: -5rem;
         z-index: -1;
-        animation: slide 0.3s forwards;
+        animation: slide 0.1s forwards;
 
         a {
             color: $textColor;
@@ -100,6 +112,22 @@
         }
         100% {
             left: -12rem;
+        }
+    }
+    &.open {
+        #burger {
+            background: transparent;
+
+            &::before {
+                transform: rotate(45deg);
+                top: 2px;
+                background: $textColor;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                top: 2px;
+                background: $textColor;
+            }
         }
     }
 }

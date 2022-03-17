@@ -22,6 +22,11 @@ li {
   font-style: italic;
 }
 
+.logo {
+  width: 100px;
+  position: relative;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,11 +47,6 @@ li {
   .header {
     margin: 0 10rem;
   }
-}
-
-.header .logo {
-  width: 100px;
-  position: relative;
 }
 
 .header .navbar {
@@ -265,13 +265,63 @@ li {
 
 @media (min-width: 1024px) {
   .location_section .location_container .branch_container {
-    text-align: center;
+    text-align: flex-start;
     margin-top: 5rem;
+    margin-left: 5rem;
   }
   .location_section .location_container .branch_container:nth-child(2) {
     border-left: 1px solid #fff373;
     border-right: 1px solid #fff373;
   }
+}
+
+.location_section .location_container .branch_container .icon_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.location_section .location_container .branch_container .icon_container p {
+  margin-left: 10px;
+}
+
+.location_section .social_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .location_section .social_media {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.location_section .social_media .socmed_icon {
+  font-size: 2rem;
+  margin-right: 2rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  margin-top: 2rem;
+}
+
+.location_section .social_media .socmed_icon:hover {
+  color: #de0202;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 footer {
@@ -287,6 +337,7 @@ footer {
   top: 3rem;
   right: 3rem;
   z-index: 3;
+  width: 1.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -295,23 +346,29 @@ footer {
   }
 }
 
-.sidebar_menu .burger_menu {
+.sidebar_menu #burger {
   display: block;
   position: relative;
   width: 1.5rem;
   height: 3px;
   background: #f3f3f3;
   border-radius: 2px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
-.sidebar_menu .burger_menu:hover, .sidebar_menu .burger_menu:hover::before, .sidebar_menu .burger_menu:hover::after {
+.sidebar_menu #burger.open {
+  background: transparent;
+}
+
+.sidebar_menu #burger:hover, .sidebar_menu #burger:hover::before, .sidebar_menu #burger:hover::after {
   background: #de0202;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   cursor: pointer;
 }
 
-.sidebar_menu .burger_menu::before {
+.sidebar_menu #burger::before {
   content: '';
   position: absolute;
   width: 1.5rem;
@@ -319,9 +376,12 @@ footer {
   background: #f3f3f3;
   border-radius: 2px;
   top: 7px;
+  display: block;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
-.sidebar_menu .burger_menu::after {
+.sidebar_menu #burger::after {
   content: '';
   position: absolute;
   width: 1.5rem;
@@ -329,6 +389,9 @@ footer {
   background: #f3f3f3;
   border-radius: 2px;
   bottom: 7px;
+  display: block;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .sidebar_menu .sidebar {
@@ -352,8 +415,8 @@ footer {
   top: -3rem;
   right: -5rem;
   z-index: -1;
-  -webkit-animation: slide 0.3s forwards;
-          animation: slide 0.3s forwards;
+  -webkit-animation: slide 0.1s forwards;
+          animation: slide 0.1s forwards;
 }
 
 .sidebar_menu .sidebar a {
@@ -425,5 +488,23 @@ footer {
   100% {
     left: -12rem;
   }
+}
+
+.sidebar_menu.open #burger {
+  background: transparent;
+}
+
+.sidebar_menu.open #burger::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 2px;
+  background: #333;
+}
+
+.sidebar_menu.open #burger::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 2px;
+  background: #333;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -51,6 +51,11 @@ li {
     font-style: italic;
 }
 
+.logo {
+    width: 100px;
+    position: relative;
+}
+
 @mixin btnColor {
     background: $subColor;
     border: none;

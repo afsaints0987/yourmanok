@@ -40,13 +40,45 @@
             padding-bottom: 2rem;
         
             @include desktop {
-                text-align: center;
+                text-align: flex-start;
                 margin-top: 5rem;
+                margin-left: 5rem;
                 
                 &:nth-child(2) {
                     border-left: 1px solid $secondaryColor;
                     border-right: 1px solid $secondaryColor;
                 }
+            }
+            .icon_container {
+                display: flex;
+                margin-top: 10px;
+
+                p {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .social_media {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+
+        @include desktop {
+            flex-direction: row;
+        }
+
+        .socmed_icon {
+            font-size: 2rem;
+            margin-right: 2rem;
+            transition: all 0.3s ease-out;
+            margin-top: 2rem;
+
+            &:hover {
+                color: $subColor;
+                transition: all 0.3s ease-out;
+                cursor: pointer;
             }
         }
     }

@@ -1,4 +1,9 @@
 import React from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+
+
 
 function Location() {
 
@@ -27,11 +32,15 @@ function Location() {
                     return (
                         <div key={index} className="branch_container">
                             <h4>{branch.name}</h4>
-                            <p>{branch.address}</p>
-                            <p>{branch.contact}</p>
+                            <span className="icon_container"><FontAwesomeIcon icon={faLocationDot} /> <p>{branch.address}</p></span>
+                            <span className="icon_container"><FontAwesomeIcon icon={faPhone}/> <p>{branch.contact}</p></span>
                         </div>
                     )
                 })}
+            </div>
+            <div className="social_media">
+                <FontAwesomeIcon className="socmed_icon" icon={faFacebookF} />
+                <FontAwesomeIcon className="socmed_icon" icon={faInstagram} />
             </div>
         </div>
     )
